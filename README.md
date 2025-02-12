@@ -25,10 +25,10 @@ cd crud-note-api
 ```sh
 dotnet run
 ```
-This will start the API on `http://localhost:5041`.
+This will start the API on `http://localhost:5127`.
 
 ### Scalar Service
 Run Scalar:
 ```sh
-http://localhost:5041/scalar/v1
+http://localhost:5127/scalar/v1
 ```
