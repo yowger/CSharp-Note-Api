@@ -15,7 +15,7 @@ A simple scalable CRUD API for managing notes, built with C# and ASP.NET Core us
 
 ### **Clone the Repository**
 ```sh
-git clone https://github.com/your-username/crud-note-api.git
+git clone https://github.com/yowger/CSharp-Note-Api.git
 cd crud-note-api
 ```
 
