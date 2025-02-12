@@ -1,3 +1,4 @@
+using NoteApi.Endpoints;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,12 +12,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-// app.MapGet("/", () => "GET");
-
-// app.MapPost("/", () => "POST");
-
-// app.MapPut("/", () => "PUT");
-
-// app.MapDelete("/", () => "DELETE");
+app.UseHttpsRedirection();
+app.MapNotesEndpoints();
 
 app.Run();
