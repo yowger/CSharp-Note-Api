@@ -5,8 +5,49 @@ namespace NoteApi.Repositories;
 
 public class InMemNoteRepository : INoteRepository
 {
-    private readonly List<Note> _notes = new();
-    private int _nextId = 1;
+    // private readonly List<Note> _notes = new();
+    // private int _nextId = 1;
+    
+     private readonly List<Note> _notes = new()
+    {
+        new Note
+        {
+            Id = 1,
+            UserId = "user_001",
+            Title = "Meeting Notes",
+            Content = "Discuss project roadmap and milestones.",
+            IsArchived = false,
+            Tags = new List<string> { "work", "meeting" }
+        },
+        new Note
+        {
+            Id = 2,
+            UserId = "user_002",
+            Title = "Grocery List",
+            Content = "Milk, eggs, bread, and coffee.",
+            IsArchived = false,
+            Tags = new List<string> { "shopping", "personal" }
+        },
+        new Note
+        {
+            Id = 3,
+            UserId = "user_003",
+            Title = "Workout Plan",
+            Content = "Monday - Chest & Triceps, Wednesday - Back & Biceps.",
+            IsArchived = false,
+            Tags = new List<string> { "fitness", "health" }
+        },
+        new Note
+        {
+            Id = 4,
+            UserId = "user_004",
+            Title = "Vacation Ideas",
+            Content = "Visit Japan, explore Kyoto, try sushi.",
+            IsArchived = false,
+            Tags = new List<string> { "travel", "bucket list" }
+        }
+    };
+    private int _nextId = 5;
 
     public Task AddNoteAsync(Note note)
     {
@@ -64,6 +105,7 @@ public class InMemNoteRepository : INoteRepository
     }
 
     // TODO: search by tags, date 
+    // TODO: pagination
     public Task<IEnumerable<Note>> SearchNotesAsync(string searchTerm)
     {
         var notes = _notes

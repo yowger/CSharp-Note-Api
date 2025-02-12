@@ -1,7 +1,9 @@
 using NoteApi.Endpoints;
+using NoteApi.Repositories;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddSingleton<INoteRepository, InMemNoteRepository>();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
