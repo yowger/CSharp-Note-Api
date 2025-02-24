@@ -1,6 +1,6 @@
 # 📒 CRUD Note API
 
-A simple scalable CRUD API for managing notes, built with C# and ASP.NET Core using best practices.
+A simple CRUD API for managing notes, built with C# and ASP.NET Core using best practices.
 
 ## 🛠️ Technologies Used
 
